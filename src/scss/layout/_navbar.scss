@@ -1,0 +1,133 @@
+@use 'sass:map';
+@use '../abstracts/' as *;
+@use '../components/dropdown';
+
+// Navbar style
+.navbar {
+  @include flex;
+  height: 80px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: map-get($color, primary);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+    z-index: 1;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+}
+
+#navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: map-get($color, text);
+  font-weight: 700;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .navbar__item {
+    height: 80px;
+
+    .navbar__links {
+      @include flex;
+      text-decoration: none;
+      font-size: map-get($fontSize, sm);
+      color: map-get($color, text);
+      width: 125px;
+      height: 100%;
+    }
+  }
+}
+
+.navbar__btn {
+  @include flex;
+}
+
+@include mq(medium) {
+  .mobile__dropdown {
+    display: block;
+  }
+  .navbar__menu {
+    display: grid;
+    grid-template-columns: auto;
+    position: absolute;
+    top: -1000px;
+    left: 0;
+    opacity: 0;
+    transition: all 0.5s ease;
+    width: 100%;
+    padding: 0 2em 2em;
+
+    &.active {
+      background: map-get($color, primary);
+      top: 100%;
+      opacity: 1;
+      z-index: 99;
+      height: 50vh;
+      transition: all 0.5 ease;
+    }
+
+    .navbar__item {
+      width: 100%;
+
+      .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+      }
+    }
+  }
+
+  .navbar__btn {
+    display: none;
+  }
+
+  .navbar__toggle {
+    display: flex;
+
+    .burger {
+      align-self: center;
+      cursor: pointer;
+      padding-left: 20px;
+    }
+
+    .bar {
+      width: 24px;
+      height: 3px;
+      margin: 4px auto;
+      border-radius: 50px;
+      transition: all 0.2s ease-in-out;
+      background: map-get($color, text);
+      display: block;
+    }
+  }
+
+  #mobile-menu .bar:nth-child(2) {
+    width: 19px;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}

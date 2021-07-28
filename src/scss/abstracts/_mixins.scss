@@ -1,0 +1,17 @@
+@use 'sass:map';
+@use 'breakpoints' as *;
+
+// Display Flex align, justify
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin mq($key) {
+  $size: map-get($breakpoints, $key);
+
+  @media (max-width: $size) {
+    @content;
+  }
+}
