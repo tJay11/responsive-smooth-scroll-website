@@ -1,10 +1,11 @@
 @use 'sass:map';
+@use '../components/buttons' as *;
 @use '../abstracts/' as *;
 
-.home {
+.wrapper {
   padding: 2em 50px;
 
-  &__container {
+  .home__container {
     width: 100%;
     max-width: 1000px;
     min-height: 530px;
@@ -19,11 +20,29 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      transform: translate(50%, 50%);
+      width: 1000px;
+      height: 1000px;
+      opacity: 0.8;
+      z-index: -1;
+      border-radius: 500px;
+      background: map-get($color, other2);
+
+      animation: movement 1.3s ease-in-out;
+    }
 
     .home__left {
       display: flex;
       flex-direction: column;
-      padding: 0 3em;
+      padding: 0 2em;
 
       h1 {
         font-weight: 400;
@@ -39,6 +58,51 @@
     .home__right {
       display: flex;
       justify-content: center;
+    }
+  }
+}
+
+@keyframes movement {
+  0% {
+    transform: translate(100%, 100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(50%, 50%);
+    opacity: 0.8;
+  }
+}
+
+@include mq(medium-sm) {
+  .home__left {
+    padding: 0 !important;
+  }
+}
+
+@include mq(medium-xs) {
+  .wrapper {
+    padding: 2em 20px;
+
+    .home__container {
+      grid-template-columns: 1fr;
+      // gap: 2em;
+      padding: 3em;
+
+      &::after {
+        transform: translate(10%, 80%);
+      }
+
+      .home__left {
+        text-align: center;
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: map-get($fontSize, sm);
+        }
+      }
     }
   }
 }
