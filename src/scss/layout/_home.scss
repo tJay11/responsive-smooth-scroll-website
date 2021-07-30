@@ -6,20 +6,18 @@
   padding: 2em 50px;
 
   .home__container {
-    width: 100%;
-    max-width: 1000px;
-    min-height: 530px;
+    @include container;
+    min-height: 510px;
     background: map-get($color, secondary);
-    border-radius: 10px;
+    border-radius: map-get($bR, md);
     margin: 0 auto;
-    padding: 4em;
+    padding: 3em;
     overflow: hidden;
     color: map-get($color, primary);
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
     position: relative;
     z-index: 1;
 
@@ -52,6 +50,7 @@
 
       p {
         font-size: map-get($fontSize, md);
+        font-weight: 300;
       }
     }
 
@@ -80,13 +79,23 @@
 }
 
 @include mq(medium-xs) {
+  *h2 {
+    font-size: 1.2rem !important;
+  }
+
+  *h1 {
+    font-size: 2rem !important;
+  }
+
+  *p {
+    font-size: map-get($fontSize, sm) !important;
+  }
   .wrapper {
     padding: 2em 20px;
 
     .home__container {
       grid-template-columns: 1fr;
-      // gap: 2em;
-      padding: 3em;
+      padding: 2em;
 
       &::after {
         transform: translate(10%, 80%);
@@ -94,14 +103,6 @@
 
       .home__left {
         text-align: center;
-
-        h1 {
-          font-size: 2rem;
-        }
-
-        p {
-          font-size: map-get($fontSize, sm);
-        }
       }
     }
   }

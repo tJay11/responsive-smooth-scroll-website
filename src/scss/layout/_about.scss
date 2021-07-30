@@ -1,0 +1,135 @@
+@use 'sass:map';
+@use '../abstracts/' as *;
+
+.about__container {
+  @include container;
+  min-height: 700px;
+  padding: 3em 2em;
+  color: map-get($color, primary);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  z-index: 1;
+
+  .about__left {
+    background: map-get($color, other4);
+    padding: 3em;
+    border-radius: map-get($bR, md);
+    overflow: hidden;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    h2 {
+      font-weight: 400;
+      font-size: map-get($fontSize, lg);
+      margin-bottom: 1em;
+    }
+
+    p {
+      font-size: map-get($fontSize, md);
+      font-weight: 300;
+    }
+  }
+
+  .about__right {
+    @include flex;
+    flex-direction: column;
+
+    .blockquote {
+      width: 100%;
+      height: 400px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      position: relative;
+
+      .inner__text {
+        background-color: map-get($color, other5);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 300px;
+        border-radius: map-get($bR, md);
+        padding: 2em;
+        overflow: hidden;
+        overflow-y: scroll;
+
+        /*  styling scrollbars  */
+
+        &::-webkit-scrollbar {
+          width: 7px;
+          height: 6px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: #fff;
+          border-radius: 50px;
+        }
+
+        h3 {
+          font-weight: 400;
+          margin-bottom: 0.7em;
+          text-align: center;
+        }
+
+        ul {
+          margin: 0;
+          padding-left: 20px;
+
+          li {
+            font-size: 0.8rem;
+            margin: 9px 0;
+
+            &::marker {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    .admission {
+      color: map-get($color, text);
+      padding: 1.2em;
+      width: 100%;
+
+      h4 {
+        font-weight: 600;
+        margin-bottom: 0.2em;
+      }
+
+      p {
+        font-size: map-get($fontSize, sm);
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+
+@include mq(medium) {
+  .about__container {
+    padding: 3em 0;
+    grid-template-columns: 1fr;
+    gap: 2em;
+
+    .about__right .blockquote {
+      border-radius: map-get($bR, md);
+    }
+  }
+}
+
+@include mq(medium-xs) {
+  .about__left {
+    padding: 2em !important;
+  }
+
+  .about__right .blockquote .inner__text {
+    padding: 1.2em !important;
+  }
+}

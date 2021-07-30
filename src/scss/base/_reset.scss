@@ -41,6 +41,18 @@ body {
   line-height: 1.5;
 }
 
+/*  styling scrollbars  */
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(101, 101, 101);
+  border-radius: 2px;
+}
+
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;

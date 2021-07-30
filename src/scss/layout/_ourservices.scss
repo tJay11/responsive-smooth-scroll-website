@@ -1,0 +1,64 @@
+@use 'sass:map';
+@use '../abstracts/' as *;
+
+.service__container {
+  @include container;
+  //   background: map-get($color, other2);
+  color: map-get($color, text);
+  min-height: 400px;
+  padding: 3em 2em;
+  border-radius: map-get($bR, md);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  .service__left {
+    height: inherit;
+    border-radius: map-get($bR, md);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .service__right {
+    @include flex;
+    flex-direction: column;
+    padding: 0 2em;
+    gap: 1.5em;
+
+    h2 {
+      font-weight: 500;
+      font-size: map-get($fontSize, lg);
+      margin-bottom: 1em;
+    }
+
+    p {
+      font-size: map-get($fontSize, md);
+      font-weight: 400;
+    }
+
+    .conditions {
+      h4 {
+        font-weight: 600;
+        margin-bottom: 0.2em;
+      }
+
+      p {
+        font-size: map-get($fontSize, sm);
+        margin-bottom: 1em;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@include mq(medium) {
+  .service__container {
+    grid-template-columns: 1fr;
+    padding: 3em 0;
+
+    .service__left {
+      display: none !important;
+    }
+  }
+}

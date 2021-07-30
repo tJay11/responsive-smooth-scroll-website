@@ -8,6 +8,14 @@
   justify-content: center;
 }
 
+// Container Mixin
+@mixin container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+// MediaQuery Mixin
 @mixin mq($key) {
   $size: map-get($breakpoints, $key);
 
