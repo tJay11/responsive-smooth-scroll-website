@@ -1,0 +1,28 @@
+@use 'sass:map';
+@use '../abstracts/' as *;
+
+.footer {
+  background: map-get($color, secondary);
+
+  &__container {
+    margin: 0 auto;
+    padding: 2em 50px;
+    min-height: 80px;
+    width: 100%;
+    max-width: 1100px;
+    color: map-get($color, primary);
+    @include mq(medium-xs) {
+      padding: 2em 1.5em;
+    }
+
+    hr {
+      margin: 2em 0 0.7em 0;
+      border: 1px solid map-get($color, other2);
+      background-color: map-get($color, other4);
+      border-radius: 50%;
+    }
+    small {
+        font-size: map-get($fontSize, xs);
+    }
+  }
+}

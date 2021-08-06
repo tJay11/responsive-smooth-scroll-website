@@ -5,9 +5,9 @@
 // Navbar style
 .navbar {
   @include flex;
-  height: 80px;
+  height: 70px;
   position: -webkit-sticky;
-  position: sticky;
+  position: sticky !important;
   top: 0;
   z-index: 999;
   background: map-get($color, primary);
@@ -20,6 +20,7 @@
     z-index: 1;
     margin: 0 auto;
     padding: 0 50px;
+    height: inherit;
   }
 }
 
@@ -39,7 +40,7 @@
   padding: 0;
 
   .navbar__item {
-    height: 80px;
+    height: 70px;
 
     .navbar__links {
       @include flex;
@@ -47,7 +48,24 @@
       font-size: map-get($fontSize, sm);
       color: map-get($color, text);
       width: 125px;
-      height: 100%;
+      height: inherit;
+
+      &.highlight {
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 90%;
+          height: 4px;
+          border-radius: 3px;
+          top: 98%;
+          left: 50%;
+          transform: translate(-50%, -98%);
+          background: map-get($color, secondary);
+          z-index: -1;
+        }
+      }
     }
   }
 }
@@ -58,7 +76,9 @@
 
 @include mq(medium) {
   .mobile__dropdown {
-    display: block;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
   }
   .navbar__menu {
     display: grid;
@@ -91,6 +111,12 @@
     }
   }
 
+  @include mq(medium-xs) {
+    .navbar__container {
+      padding: 0 1.5em !important;
+    }
+  }
+
   .navbar__btn {
     display: none;
   }
@@ -101,7 +127,6 @@
     .burger {
       align-self: center;
       cursor: pointer;
-      padding-left: 20px;
     }
 
     .bar {

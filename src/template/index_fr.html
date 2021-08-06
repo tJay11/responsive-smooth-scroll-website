@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warnati</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../scss/main.scss">
+
+    <!-- AOS CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="../assets/js/all.min.js"></script>
+</head>
+
+<body>
+    <!-- NavBar Section -->
+    <div class="navbar">
+        <div class="navbar__container">
+            <a href="#" id="navbar-logo" title="Warnati"><img src="../assets/img/Logo.svg" alt=""></a>
+
+            <!-- Mobile Nav -->
+            <div class="navbar__toggle">
+                <div class="dropdown mobile__dropdown">
+                    <button title="Langue" class="dropbtn"><i class="fas fa-globe-europe"></i></button>
+                    <div class="dropdown-content">
+                        <a href="./index.html">Anglais(English)</a>
+                        <a class="active" href="./index_fr.html">Français</a>
+                        <a href="./index_ar.html">Arabe(عربى)</a>
+                    </div>
+                </div>
+                <div class=" burger" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+
+            <!-- Desktop Nav -->
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="#" class="navbar__links" id="home-page">Domicile</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#about" class="navbar__links" id="about-page">À propos de nous</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#service" class="navbar__links" id="service-page">Nos services</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#team" class="navbar__links" id="team-page">Notre équipe</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#contact" class="navbar__links" id="contact-page">Contact</a>
+                </li>
+                <li class="navbar__btn">
+                    <div class="dropdown">
+                        <button title="Langue" class="dropbtn"><i class="fas fa-globe-europe"></i></button>
+                        <div class="dropdown-content">
+                            <a href="./index.html">Anglais(English)</a>
+                            <a class="active" href="./index_fr.html">Français</a>
+                            <a href="./index_ar.html">Arabe(عربى)</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+
+
+    <!-- Home Section -->
+    <div class="wrapper" id="home">
+        <div class="home__container">
+            <div class="home__left" data-aos="zoom-in" data-aos-once="true">
+                <h1>Bienvenue chez <b>Warnati</b></h1>
+                <div>
+                    <p>
+                        WARNATI est un réseau de professionnels dans les domaines de la traduction et de l'interprétation en Occident. WARNATI
+                        propose des services complets de traduction, de conseil et de localisation de l'anglais français vers l'arabe ainsi que
+                        de l'arabe vers l'anglais et le français.
+                    </p>
+                </div>
+            </div>
+            <div class="home__right">
+                <button class="btn_1"><a href="#contact">Nous contacter</a></button>
+            </div>
+        </div>
+    </div>
+    <!--End Home Section -->
+
+
+
+    <!-- About Section -->
+    <div class="wrapper" id="about">
+        <div class="about__container">
+            <div class="about__left">
+                <div>
+                    <h2>À propos de nous</h2>
+                    <p data-aos="fade-up" data-aos-once="true" data-aos-offset="100">
+                        L’adhésion au Réseau est ouverte à tout citoyen d’un pays de l’Afrique de l’ouest ayant de bonnes connaissances de
+                        l’arabe, de l’anglais et /ou du français, titulaire d’un diplôme universitaire en interprétation et traduction et ayant
+                        exercé pendant plusieurs années au niveau national ou international. Le Réseau est également prêt à travailler avec des
+                        universitaires arabes intéressés résidant en Afrique ou ailleurs. Les membres de l’Association internationale des
+                        Interprètes de conférence (AIIC)et de l’Association internationale des traducteurs de conférence (AITC) ayant l’arabe
+                        dans leur combinaison linguistique peuvent également adhérer au Réseau.
+                    </p>
+                </div>
+            </div>
+            <div class="about__right" data-aos="fade-right" data-aos-offset="200">
+                <div class="blockquote" style="background-image: url(../assets/img/img.jpg);">
+                    <div class="inner__text">
+                        <h3>Nos buts et objectifs</h3>
+                        <ul>
+                            <li>Plaidoyer et sensibilisation des universitaires/intellectuels quel que soit leur religion et leur appartenance ethnique
+                                à l’importance de la langue arabe en tant que langue africaine pour le continent.</li>
+                            <li>Interprétation et traduction de qualité assurées par des professionnels.</li>
+                            <li>Regroupement des interprètes et des traducteurs qualifiés de la sous-région.</li>
+                            <li>Traduction de documents de conférence de l’anglais et du français vers l’arabe et de l’arabe vers l’anglais et le
+                                français.</li>
+                            <li>Organisation et couverture de réunions en collaboration avec les associations, établissements, institutions et agences
+                                de traduction de la sous-région.</li>
+                            <li>Traduction d’oeuvres littéraires et d’autres ouvrages de l’arabe vers l’anglais et le français à l’intention des élèves
+                                du primaire, du secondaire, des établissements d’enseignement supérieur et du grand public.</li>
+                            <li>Elaboration de programmes d’enseignement et de manuels d’étude de la langue arabe.</li>
+                            <li>Collaboration avec WAEC et étroite cooperation avec la CEDEAO, les institutions internationales et régionales, les
+                                établissements scolaires et publics pour toute question liée à l’apprentissage et à l’utilisation de la langue arabe.</li>
+                            <li>Traduction d’archives et de manuscripts disponibles dans les universités et établissements supérieurs d’Afrique de
+                                l’ouest ou auprès des Imams et des Sheikhs.</li>
+                            <li>Traduction de scripts et de sous-titres de films réalisés en Afrique de l’ouest à l’intention du public arabophone en
+                                étroite collaboration avec les réalisateurs de la sous-région.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="admission" data-aos="fade-up" data-aos-offset="0">
+                    <h4>Admission</h4>
+                    <p>L’admission au Réseau se fait sur présentation d’un Curriculum Vitae et de recommandations d’institutions et
+                        d’organisations compétentes.</p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End About Section -->
+
+
+    <!-- Our Service Section -->
+    <div class="wrapper" id="service">
+        <div class="service__container">
+            <div class="service__left" data-aos="fade-right" style="background-image: url(../assets/img/img2.jpg);">
+            </div>
+            <div class="service__right" data-aos="fade-left" data-aos-once="true">
+                <div>
+                    <h2>Nos services</h2>
+                    <p>
+                        WARNATI se propose de couvrir les réunions de la Communauté des Etats de l’Afrique de l’ouest (CEDEAO), de l’Union
+                        africaine (UA), de l’Organisation de la Conférence islamique (OCI), de la Banque islamique de développement (BID) et
+                        d’autres institutions semblables dans la sous-région. Warnati envisage d’ouvrir des centres de coordination dans la
+                        sous-région dans des capitales de pays d’Afrique de l’ouest . Des membres du Réseau Warnati serviront d’intermédiaires
+                        dans ces capitales entre les clients, les institutions et les interprètes et traducteurs travaillant sur les projets.
+                        Warnati coopérera activement avec les institutions et professionnels de l’éducation, de la traduction et de
+                        l’interprétation à partir de l’arabe et vers l’arabe. Le Réseau acceptera, à travers ses centres de coordination, des
+                        documents à traduire en ligne et les livrera dûment traduits en ligne.
+                    </p>
+                </div>
+                <div class="conditions">
+                    <h4>Conditions de service</h4>
+                    <p>
+                        Le contrat entre WARNATI et ses clients, en ce qui concerne la fourniture de traduction, des services d'interprétation,
+                        de localisation et de consultation, sera régi par les limites décrites dans des conditions pour des services.
+                    </p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Our Service Section -->
+
+
+    <!-- Our Team Section -->
+    <div class="wrapper" id="team">
+        <div class="team__container">
+            <div class="team__content">
+                <h2>Notre équipe</h2>
+                <small>Rencontrer l'équipe</small>
+
+                <ul data-aos="fade-up" data-aos-offset="100">
+                    <li>
+                        <h4>Sheikh Mustapha Ndiaye</h4>
+                        <p>
+                            un éducateur sénégalais renommé, chercheur d'IFAN, traducteur et réviseur (OAU/AU, CCE, OIC, BID, CINSAD etc.).
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Mr. MIS Gassama</h4>
+                        <p>
+                            un éducateur gambien renommé, diplomate, auteur, poèt, traducteur et réviseur OAU/AU, CCE, OIC, BID etc.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>L'Ambassadeur Baba Drammeh</h4>
+                        <p>
+                            un éducateur gambien renommé, un chercheur, fonctionnaire et traducteur, BID, OIC, AU etc. M. Momdou Lamin Yaffa, un
+                            éducateur gambien renommé, un chercheur, fonctionnaire et traducteur et interprète trilingue, BID, OIC, AU etc.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Mr. Momdou Lamin Yaffa</h4>
+                        <p>
+                            un économiste sénégalais souple, traducteur etc.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Mr. Mustapha Dem</h4>
+                        <p>
+                            un éducateur renommé, traducteur, interprète du Niger, UNECA, CINSAD etc.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Abou Mahamman Lawan</h4>
+                        <p>
+                            un éducateur renommé, traducteur, interprète du Niger, UNECA, CINSAD etc.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Mohamed Lemine Ould Allal</h4>
+                        <p>
+                            un journaliste renommé, expert dans la communication, traducteur et interprète de Mauritanie.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Mr. Edally Gassama</h4>
+                        <p>
+                            traducteur trilingue - chef de l'interprète (l'arabe, anglais français) autrefois des conférences à l'ICC, la Haye.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Mr. AbduRahmane Diop</h4>
+                        <p>
+                            un traducteur sénégalais renommé, chef de traduction et interprétation, banque de développement islamique, Jeddah,
+                            royaume de l'Arabie Saoudite royal.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Mr. Mohamed Lamine BIYE</h4>
+                        <p>
+                            un interprète mauritanien renommé (Français arabe, arabe français).
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Our Team Section -->
+
+    <!-- Contact Section -->
+    <div class="wrapper" id="contact">
+        <div class="contact__container">
+            <div class="contact__left" data-aos="fade-right">
+                <div>
+                    <h2>Prenez contact avec nous</h2>
+                    <small>Nous aimerions recevoir de vos nouvelles</small>
+                </div>
+                <div class="contact__info">
+                    <div>
+                        <span><i class="fas fa-map-marker-alt"></i></span>
+
+                        <ul>
+                            <li>Africana Guest House</li>
+                            <li>North Legon</li>
+                            <li>P.O. Box NB 208 Nii-Boi Town</li>
+                            <li>Accra-Ghana</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span><i class="fas fa-phone-alt"></i></span>
+
+                        <ul>
+                            <li>+233 21 521 307</li>
+                            <li>+233 543 030 152</li>
+                            <li>+251 911200152(International)</li>
+                            <li>+233 21 521 307(Télécopieur)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span><i class="fas fa-at"></i></span>
+
+                        <ul>
+                            <li>info@warnati.com</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5002.279069377614!2d-0.18303804444067684!3d5.66804422262466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9cf33eca6489%3A0xf8525aeb37eda33b!2sAfricana%20Guesthouse!5e0!3m2!1sen!2sgh!4v1627651978870!5m2!1sen!2sgh"
+                        style="width: 100%; height: 300px; border:0; border-radius:10px;" allowfullscreen=""
+                        loading="lazy" title="Location"></iframe>
+                </div>
+
+            </div>
+            <div class="contact__right" data-aos="fade-up">
+                <div class="content">
+                    <h5>Envoyer le message?</h5>
+                    <p>
+                        Nous contacter est facile. Envoyez-nous un email en cliquant sur le bouton ci-dessous.
+                    </p>
+                    <div class="email__btn">
+                        <a href="mailto:info@warnati.com">info@warnati.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact Section -->
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer__container">
+            <div>
+                <a href="#"><img src="../assets/img/Logo2.svg" alt="Warnati"></a>
+            </div>
+            <hr>
+            <small>
+                &copy 2021 Whitsun Systems Ltd.
+            </small>
+        </div>
+    </div>
+    <!-- End Footer -->
+
+
+
+
+    <script src="../assets/js/app.js"></script>
+
+    <!-- AOS JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 900,
+        });
+    </script>
+</body>
+
+</html>

@@ -11,7 +11,7 @@
     background: map-get($color, secondary);
     border-radius: map-get($bR, md);
     margin: 0 auto;
-    padding: 3em;
+    padding: 4em;
     overflow: hidden;
     color: map-get($color, primary);
     display: grid;
@@ -34,7 +34,13 @@
       border-radius: 500px;
       background: map-get($color, other2);
 
+      -webkit-animation: movement 1.3s ease-in-out;
+
       animation: movement 1.3s ease-in-out;
+    }
+
+    &.arabic::after {
+      transform: translate(-50%, 50%) !important;
     }
 
     .home__left {
@@ -58,6 +64,17 @@
       display: flex;
       justify-content: center;
     }
+  }
+}
+
+@-webkit-keyframes movement {
+  0% {
+    transform: translate(100%, 100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(50%, 50%);
+    opacity: 0.8;
   }
 }
 
@@ -99,6 +116,10 @@
 
       &::after {
         transform: translate(10%, 80%);
+      }
+
+      &.arabic::after {
+        transform: translate(10%, 80%) !important;
       }
 
       .home__left {

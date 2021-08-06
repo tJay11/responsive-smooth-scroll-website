@@ -3,10 +3,9 @@
 
 .service__container {
   @include container;
-  //   background: map-get($color, other2);
   color: map-get($color, text);
-  min-height: 400px;
-  padding: 3em 2em;
+  min-height: 650px;
+  padding: 6em 2em 4em;
   border-radius: map-get($bR, md);
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -15,9 +14,7 @@
     height: inherit;
     border-radius: map-get($bR, md);
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
   }
 
   .service__right {
@@ -60,5 +57,11 @@
     .service__left {
       display: none !important;
     }
+  }
+}
+
+@include mq(medium-xs) {
+  .service__right {
+    padding: 0 1em !important;
   }
 }

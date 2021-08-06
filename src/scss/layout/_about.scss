@@ -4,7 +4,7 @@
 .about__container {
   @include container;
   min-height: 700px;
-  padding: 3em 2em;
+  padding: 4em 2em;
   color: map-get($color, primary);
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -46,6 +46,10 @@
       background-repeat: no-repeat;
       background-attachment: fixed;
       position: relative;
+
+      &.arabic {
+        border-radius: 10px 0 0 10px !important;
+      }
 
       .inner__text {
         background-color: map-get($color, other5);
@@ -120,6 +124,10 @@
 
     .about__right .blockquote {
       border-radius: map-get($bR, md);
+
+      &.arabic {
+        border-radius: map-get($bR, md) !important;
+      }
     }
   }
 }

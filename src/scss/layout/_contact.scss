@@ -1,0 +1,129 @@
+@use 'sass:map';
+@use '../components/buttons' as *;
+@use '../abstracts/' as *;
+
+.contact__container {
+  @include container;
+  padding: 2em;
+  display: flex;
+  flex-direction: row;
+
+  > div {
+    width: 100%;
+  }
+  // z-index: 1;
+
+  .contact__left {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+
+    h2 {
+      font-weight: 500;
+      font-size: map-get($fontSize, lg);
+    }
+
+    small {
+      font-size: 0.7rem;
+    }
+
+    p {
+      font-size: map-get($fontSize, md);
+      font-weight: 400;
+    }
+
+    .contact__info {
+      margin: 1.5em 0;
+
+      > div {
+        display: flex;
+        align-items: center;
+        height: 75px;
+        border-radius: 10px;
+
+        span {
+          color: #fff;
+          background: map-get($color, secondary);
+          width: 2.5em;
+          height: 2.5em;
+          display: grid;
+          place-items: center;
+          font-size: 1.1rem;
+          border-radius: 50px;
+        }
+
+        ul {
+          padding-left: 20px;
+          li {
+            list-style: none;
+            font-size: 0.65rem;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  .contact__right {
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      width: inherit;
+
+      h5 {
+        font-weight: 600;
+      }
+
+      p {
+        font-size: map-get($fontSize, sm);
+        margin-bottom: 1em;
+
+      }
+
+      .email__btn {
+        background: map-get($color, secondary);
+        text-align: center;
+        border-radius: 5px;
+        margin: 2em 0;
+
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background: map-get($color, other3);
+        }
+
+        a {
+          display: block;
+          color: map-get($color, primary);
+          font-size: 1.4rem;
+          padding: 1em 2em;
+        }
+      }
+    }
+  }
+}
+
+@include mq(medium) {
+  .contact__container {
+    flex-direction: column;
+    gap: 2em;
+    padding: 3em 0;
+  }
+}
+
+@include mq(medium-xs) {
+  .contact__left,
+  .contact__right {
+    padding: 0 1em !important;
+  }
+}
+
+@include mq(small) {
+  .contact__left iframe {
+    height: 200px !important;
+  }
+}

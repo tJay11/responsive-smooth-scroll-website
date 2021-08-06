@@ -1,0 +1,49 @@
+@use 'sass:map';
+@use '../abstracts/' as *;
+
+.team__container {
+  @include container;
+  padding: 4em 0;
+  color: map-get($color, primary);
+
+  .team__content {
+    background: map-get($color, secondary);
+    padding: 2em;
+    margin: 0 2em;
+    border-radius: map-get($bR, md);
+    @include mq(medium-xs) {
+      padding: 1em !important;
+      margin: 0 ;
+    }
+
+    h2 {
+      font-weight: 400;
+      font-size: map-get($fontSize, lg);
+    }
+    small {
+      font-size: 0.8rem;
+    }
+
+    ul {
+      padding: 0;
+
+      li {
+        list-style: none;
+        background-color: map-get($color, other3);
+        padding: 1em;
+        border-radius: 5px;
+        margin: 12px 0;
+
+        h4 {
+          font-weight: 400;
+          font-size: .9rem;
+        }
+
+        p {
+          font-size: map-get($fontSize, sm);
+          font-weight: 200;
+        }
+      }
+    }
+  }
+}
