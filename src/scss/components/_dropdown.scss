@@ -16,6 +16,11 @@
     cursor: pointer;
     transition: all 0.2s ease-in;
 
+    img {
+      width: 1em;
+      height: 1em;
+    }
+
     @include flex;
   }
 

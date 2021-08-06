@@ -1,3 +1,8 @@
+//Smooth Scroll
+const scroll = new SmoothScroll('.navbar__menu a[href*="#"]', {
+	speed: 550
+});
+
 const menu = document.querySelector('#mobile-menu');
 const mobilelinks = document.querySelector('.navbar__menu');
 const navLogo = document.querySelector('#navbar-logo')
