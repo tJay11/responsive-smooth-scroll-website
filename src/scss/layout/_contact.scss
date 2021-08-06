@@ -41,7 +41,6 @@
         border-radius: 10px;
 
         span {
-          color: #fff;
           background: map-get($color, secondary);
           width: 2.5em;
           height: 2.5em;
@@ -49,6 +48,11 @@
           place-items: center;
           font-size: 1.1rem;
           border-radius: 50px;
+
+          img {
+            width: 1em;
+            height: 1em;
+          }
         }
 
         ul {

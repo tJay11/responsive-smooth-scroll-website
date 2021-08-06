@@ -33,6 +33,10 @@
     z-index: -999;
     transition: all 0.1s ease-in;
 
+    &.arabic {
+      right: -78px;
+    }
+
     a {
       color: black;
       padding: 12px 16px;

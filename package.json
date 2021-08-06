@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/template/*.html",
-    "build": "parcel build src/template/*.html"
+    "dev": "parcel src/template/index.html",
+    "build": "parcel build src/template/index.html"
   },
   "keywords": [],
   "author": "Joseph",
