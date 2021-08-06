@@ -205,7 +205,7 @@ select {
   margin-bottom: 0.2em;
 }
 .about__container .about__right .admission p {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   margin-bottom: 1em;
 }
 
@@ -351,7 +351,7 @@ select {
   font-weight: 600;
 }
 .contact__container .contact__right .content p {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   margin-bottom: 1em;
 }
 .contact__container .contact__right .content .email__btn {
@@ -506,7 +506,7 @@ select {
   }
 
   * p {
-    font-size: 0.85rem !important;
+    font-size: 0.82rem !important;
   }
 
   .wrapper {
@@ -685,7 +685,7 @@ select {
       -ms-flex-pack: center;
           justify-content: center;
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: #272727;
   width: 125px;
   height: inherit;
@@ -863,7 +863,7 @@ select {
   margin-bottom: 0.2em;
 }
 .service__container .service__right .conditions p {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   margin-bottom: 1em;
   font-weight: 400;
 }
@@ -919,11 +919,11 @@ select {
   margin: 12px 0;
 }
 .team__container .team__content ul li h4 {
-  font-weight: 400;
   font-size: 0.9rem;
+  color: #272727;
 }
 .team__container .team__content ul li p {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 200;
 }
 

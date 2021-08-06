@@ -1,6 +1,6 @@
 //Smooth Scroll
-const scroll = new SmoothScroll('.navbar__menu a[href*="#"]', {
-	speed: 550
+const scroll = new SmoothScroll('.scroll a[href*="#"]', {
+	speed: 500
 });
 
 const menu = document.querySelector('#mobile-menu');
@@ -29,25 +29,37 @@ const highlightMenu = () => {
     if(window.innerWidth > 950 && scrollPos < 600) {
         homeMenu.classList.add('highlight')
         aboutMenu.classList.remove('highlight')
+        serviceMenu.classList.remove('highlight')
+        teamMenu.classList.remove('highlight')
+        contactMenu.classList.remove('highlight')
         return
     } else if (window.innerWidth > 950 && scrollPos < 1350) {
         aboutMenu.classList.add('highlight')
         homeMenu.classList.remove('highlight')
         serviceMenu.classList.remove('highlight')
+        teamMenu.classList.remove('highlight')
+        contactMenu.classList.remove('highlight')
         return
     } else if (window.innerWidth > 950 && scrollPos < 2050) {
         serviceMenu.classList.add('highlight')
         aboutMenu.classList.remove('highlight')
         teamMenu.classList.remove('highlight')
+        homeMenu.classList.remove('highlight')
+        contactMenu.classList.remove('highlight')
         return
     } else if (window.innerWidth > 950 && scrollPos < 3200) {
         teamMenu.classList.add('highlight')
         serviceMenu.classList.remove('highlight')
         contactMenu.classList.remove('highlight')
+        homeMenu.classList.remove('highlight')
+        aboutMenu.classList.remove('highlight')
         return
     }else if (window.innerWidth > 950 && scrollPos < 4000) {
         contactMenu.classList.add('highlight')
         teamMenu.classList.remove('highlight')
+        homeMenu.classList.remove('highlight')
+        aboutMenu.classList.remove('highlight')
+        serviceMenu.classList.remove('highlight')
         return
     }
 

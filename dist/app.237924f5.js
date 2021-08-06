@@ -119,8 +119,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"../assets/js/app.js":[function(require,module,exports) {
 //Smooth Scroll
-var scroll = new SmoothScroll('.navbar__menu a[href*="#"]', {
-  speed: 550
+var scroll = new SmoothScroll('.scroll a[href*="#"]', {
+  speed: 500
 });
 var menu = document.querySelector('#mobile-menu');
 var mobilelinks = document.querySelector('.navbar__menu');
@@ -145,25 +145,37 @@ var highlightMenu = function highlightMenu() {
   if (window.innerWidth > 950 && scrollPos < 600) {
     homeMenu.classList.add('highlight');
     aboutMenu.classList.remove('highlight');
+    serviceMenu.classList.remove('highlight');
+    teamMenu.classList.remove('highlight');
+    contactMenu.classList.remove('highlight');
     return;
   } else if (window.innerWidth > 950 && scrollPos < 1350) {
     aboutMenu.classList.add('highlight');
     homeMenu.classList.remove('highlight');
     serviceMenu.classList.remove('highlight');
+    teamMenu.classList.remove('highlight');
+    contactMenu.classList.remove('highlight');
     return;
   } else if (window.innerWidth > 950 && scrollPos < 2050) {
     serviceMenu.classList.add('highlight');
     aboutMenu.classList.remove('highlight');
     teamMenu.classList.remove('highlight');
+    homeMenu.classList.remove('highlight');
+    contactMenu.classList.remove('highlight');
     return;
   } else if (window.innerWidth > 950 && scrollPos < 3200) {
     teamMenu.classList.add('highlight');
     serviceMenu.classList.remove('highlight');
     contactMenu.classList.remove('highlight');
+    homeMenu.classList.remove('highlight');
+    aboutMenu.classList.remove('highlight');
     return;
   } else if (window.innerWidth > 950 && scrollPos < 4000) {
     contactMenu.classList.add('highlight');
     teamMenu.classList.remove('highlight');
+    homeMenu.classList.remove('highlight');
+    aboutMenu.classList.remove('highlight');
+    serviceMenu.classList.remove('highlight');
     return;
   }
 
@@ -214,7 +226,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51145" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53817" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
