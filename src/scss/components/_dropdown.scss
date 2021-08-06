@@ -8,6 +8,9 @@
   .dropbtn {
     background-color: map-get($color, tertiary);
     color: map-get($color, primary);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
     width: 2em;
     height: 2em;
     border-radius: 50px;
@@ -16,10 +19,6 @@
     cursor: pointer;
     transition: all 0.2s ease-in;
 
-    img {
-      width: 1em;
-      height: 1em;
-    }
 
     @include flex;
   }
