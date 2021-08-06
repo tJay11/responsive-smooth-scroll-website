@@ -20,17 +20,4 @@
   }
 }
 
-.btn_2 {
-  border: none;
-  background: map-get($color, secondary);
-  border-radius: 5px;
-  height: 2.7em;
-  cursor: pointer;
-  color: map-get($color, primary);
 
-  transition: all 0.3s ease;
-
-  &:hover {
-    background: map-get($color, other3);
-  }
-}
