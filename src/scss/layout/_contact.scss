@@ -84,28 +84,21 @@
       p {
         font-size: map-get($fontSize, sm);
         margin-bottom: 1em;
-
       }
+    }
+  }
 
-      .email__btn {
-        background: map-get($color, secondary);
-        text-align: center;
-        border-radius: 5px;
-        margin: 2em 0;
+  &.map {
+    padding: 0 2em 1em;
+    @include mq(medium-xs) {
+      padding: 0;
+    }
 
-        transition: all 0.3s ease-in-out;
-
-        &:hover {
-          background: map-get($color, other3);
-        }
-
-        a {
-          display: block;
-          color: map-get($color, primary);
-          font-size: 1.4rem;
-          padding: 1em 2em;
-        }
-      }
+    iframe {
+      width: 100% !important;
+      height: 400px;
+      border: 0;
+      border-radius: 10px !important;
     }
   }
 }
@@ -123,10 +116,14 @@
   .contact__right {
     padding: 0 1em !important;
   }
+
+  iframe {
+    height: 300px !important;
+  }
 }
 
 @include mq(small) {
-  .contact__left iframe {
+  iframe {
     height: 200px !important;
   }
 }

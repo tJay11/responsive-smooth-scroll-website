@@ -41,15 +41,15 @@ const highlightMenu = () => {
         contactMenu.classList.remove('highlight')
         return
     } else if (window.innerWidth > 950 && scrollPos < 2050) {
-        serviceMenu.classList.add('highlight')
+        teamMenu.classList.add('highlight')
+        serviceMenu.classList.remove('highlight')
         aboutMenu.classList.remove('highlight')
-        teamMenu.classList.remove('highlight')
         homeMenu.classList.remove('highlight')
         contactMenu.classList.remove('highlight')
         return
-    } else if (window.innerWidth > 950 && scrollPos < 3200) {
-        teamMenu.classList.add('highlight')
-        serviceMenu.classList.remove('highlight')
+    } else if (window.innerWidth > 950 && scrollPos < 3000) {
+        serviceMenu.classList.add('highlight')
+        teamMenu.classList.remove('highlight')
         contactMenu.classList.remove('highlight')
         homeMenu.classList.remove('highlight')
         aboutMenu.classList.remove('highlight')

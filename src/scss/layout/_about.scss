@@ -11,7 +11,7 @@
   z-index: 1;
 
   .about__left {
-    background: map-get($color, other4);
+    background: map-get($color, secondary);
     padding: 3em;
     border-radius: map-get($bR, md);
     overflow: hidden;
@@ -52,7 +52,7 @@
       }
 
       .inner__text {
-        background-color: map-get($color, other5);
+        background-color: map-get($color, other);
         position: absolute;
         top: 50%;
         left: 50%;
@@ -72,8 +72,8 @@
         }
 
         &::-webkit-scrollbar-thumb {
-          background: #fff;
           border-radius: 50px;
+          background: rgb(18, 74, 94);
         }
 
         h3 {
@@ -87,7 +87,10 @@
           padding-left: 20px;
 
           li {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
+            @include mq(medium-xs) {
+              font-size: map-get($fontSize , sm );
+            }
             margin: 9px 0;
 
             &::marker {

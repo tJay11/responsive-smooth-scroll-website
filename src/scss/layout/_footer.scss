@@ -3,6 +3,7 @@
 
 .footer {
   background: map-get($color, secondary);
+  margin-top: 2em;
 
   &__container {
     margin: 0 auto;
@@ -15,14 +16,24 @@
       padding: 2em 1.5em;
     }
 
+    div {
+      a {
+        display: flex;
+        align-items: center;
+        color: map-get($color, primary);
+        font-size: 1rem;
+        font-weight: 600;
+      }
+    }
+
     hr {
       margin: 2em 0 0.7em 0;
-      border: 1px solid map-get($color, other2);
-      background-color: map-get($color, other4);
+      border: 1px solid map-get($color, other6);
+      background-color: map-get($color, other6);
       border-radius: 50%;
     }
     small {
-        font-size: map-get($fontSize, xs);
+      font-size: map-get($fontSize, xs);
     }
   }
 }
